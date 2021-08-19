@@ -35,18 +35,22 @@ void process_image_callback(const sensor_msgs::Image img)
 
     if (white_pixel_location == -1)
     {
+        // stop
         drive_robot(0.0, 0.0);
     }
     else if (white_pixel_location < img.step/3.0)
     {
-        drive_robot(0.0, 0.1);
+        // turn left
+        drive_robot(0.0, 0.5);
     }
     else if (white_pixel_location > 2.0*img.step/3.0)
     {
-        drive_robot(0.0, -0.1);
+        // turn right
+        drive_robot(0.0, -0.5);
     }
     else
     {
+        // move forward
         drive_robot(0.1, 0.0);
     }
 }
