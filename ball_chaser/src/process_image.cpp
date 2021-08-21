@@ -19,17 +19,24 @@ void drive_robot(float lin_x, float ang_z)
 
 void process_image_callback(const sensor_msgs::Image img)
 {
-    int white_pixel = 255;
+    int pixel_color[3] = {255, 255, 255}; // set white color RGB values
 
     double white_pixel_location = -1.0;
 
-    for (int i=0; i < img.height * img.step; i++)
+    // iterate through each RGB pixel set
+    for (int i=0; i < img.height; i++)
     {
-
-        if (img.data[i] == white_pixel)
+        for (int j=0; j < img.width; j++)
         {
-            white_pixel_location = i % img.step;
-            break;
+            int r_channel = i*img.step + j*3;
+            int g_channel = r_channel + 1;
+            int b_channel = r_channel + 2;
+
+            if (img.data[r_channel] == pixel_color[0] && img.data[g_channel] == pixel_color[1] && img.data[b_channel] == pixel_color[2])
+            {
+                white_pixel_location = j;
+                break;
+            }
         }
     }
 
@@ -38,20 +45,20 @@ void process_image_callback(const sensor_msgs::Image img)
         // stop
         drive_robot(0.0, 0.0);
     }
-    else if (white_pixel_location < img.step/3.0)
+    else if (white_pixel_location < img.width/3.0)
     {
         // turn left
-        drive_robot(0.0, 0.5);
+        drive_robot(0, 0.5);
     }
-    else if (white_pixel_location > 2.0*img.step/3.0)
+    else if (white_pixel_location > 2.0*img.width/3.0)
     {
         // turn right
-        drive_robot(0.0, -0.5);
+        drive_robot(0, -0.5);
     }
     else
     {
         // move forward
-        drive_robot(0.1, 0.0);
+        drive_robot(0.2, 0.0);
     }
 }
 
