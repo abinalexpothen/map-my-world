@@ -17,6 +17,9 @@
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
       <broadcastTF>true</broadcastTF>
+      <covariance_x>0.001</covariance_x>
+      <covariance_y>0.001</covariance_y>
+      <covariance_yaw>0.001</covariance_yaw>
     </plugin>
   </gazebo>
 
