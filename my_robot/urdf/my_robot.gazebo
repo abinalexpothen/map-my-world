@@ -4,8 +4,6 @@
   <gazebo>
     <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
       <updateRate>100</updateRate>
-      <legacyMode>false</legacyMode>
-      <alwaysOn>true</alwaysOn>
       <robotNamespace>/</robotNamespace>
       <leftFrontJoint>front_left_wheel_hinge</leftFrontJoint>
       <leftRearJoint>back_left_wheel_hinge</leftRearJoint>
@@ -17,15 +15,8 @@
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
-      <publishOdom>true</publishOdom>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
-      <odometrySource>world</odometrySource>
-      <publishTf>1</publishTf>
-      <publishOdomTF>true</publishOdomTF>
-      <broadcastTF>false</broadcastTF>
-      <covariance_x>0.01</covariance_x>
-      <covariance_y>0.01</covariance_y>
-      <covariance_yaw>0.01</covariance_yaw>
+      <broadcastTF>true</broadcastTF>
     </plugin>
   </gazebo>
 
