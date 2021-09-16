@@ -18,7 +18,7 @@
         <param name="update_min_a" value="0.2"/>
         <param name="initial_pose_x" value="0.0"/>
         <param name="initial_pose_y" value="0.0"/>
-        <param name="initial_pose_a" value="0.0"/>
+        <param name="initial_pose_a" value="-1.571"/>
 
         <!-- laser model -->
         <param name="laser_min_range" value="-1.0"/>
