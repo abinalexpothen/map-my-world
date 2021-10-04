@@ -1,6 +1,6 @@
-# where-am-i
+# map-my-world
 
-This is the third project in a series of projects within the Udacity Robotics Software Engineer Nanodegree program. In this project, adaptive montecarlo localization (amcl) is used to localize a skid-steer robot with laser scanner in a known map of the world. 
+This is the fourth project in a series of projects within the Udacity Robotics Software Engineer Nanodegree program. In this project, RTAB-map is used to map the world. 
 
 Particle distribution at **initialization** of the world and the amcl package:
 ![rviz_screenshot_2021_09_15-23_46_02](https://user-images.githubusercontent.com/23329551/133546679-843b4c1b-3077-4cc7-993a-9ec76a84f8ad.png)
