@@ -1,6 +1,6 @@
 # map-my-world
 
-This is the fourth project in a series of projects within the Udacity Robotics Software Engineer Nanodegree program. In this project, RTAB-map is used to map the world. 
+This is the fourth project in a series of projects within the Udacity Robotics Software Engineer Nanodegree program. In this project, real-time apprearance based mapping (RTAB-Map) is used to localize a robot and map its surroundings in a Gazebo world.
 
 Particle distribution at **initialization** of the world and the amcl package:
 ![rviz_screenshot_2021_09_15-23_46_02](https://user-images.githubusercontent.com/23329551/133546679-843b4c1b-3077-4cc7-993a-9ec76a84f8ad.png)
